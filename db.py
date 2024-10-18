@@ -23,8 +23,8 @@ def insert_rule(rule_string):
 def get_all_rules():
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM rules")
+    cursor.execute("SELECT rule_string FROM rules")
     rules = cursor.fetchall()
     cursor.close()
     conn.close()
-    return rules
+    return [rule['rule_string'] for rule in rules]  # Return a list of rule strings

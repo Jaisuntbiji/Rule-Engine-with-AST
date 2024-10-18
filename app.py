@@ -9,16 +9,18 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+# Endpoint to create a rule and store it
 @app.route('/create_rule', methods=['POST'])
 def create_rule_endpoint():
     rule_string = request.json.get('rule')
     try:
-        # Create the rule in the database
+        rule_ast = create_rule(rule_string)
         insert_rule(rule_string)  # Save the rule to the database
         return jsonify({"message": "Rule created successfully!", "rule": rule_string}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 400
 
+# Endpoint to combine rules
 @app.route('/combine_rules', methods=['POST'])
 def combine_rules_endpoint():
     rules = request.json.get('rules')
@@ -28,15 +30,21 @@ def combine_rules_endpoint():
     except Exception as e:
         return jsonify({"error": str(e)}), 400
 
+# Endpoint to evaluate all rules against user data
 @app.route('/evaluate_rule', methods=['POST'])
 def evaluate_rule_endpoint():
-    rule_ast = ast.literal_eval(request.json.get('rule_ast'))
     user_data = request.json.get('user_data')
-    try:
-        result = evaluate_rule(rule_ast, user_data)
-        return jsonify({"result": result}), 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 400
+    all_rules = get_all_rules()  # Fetch all rules from the database
+    results = {}
+
+    for rule in all_rules:
+        try:
+            rule_ast = create_rule(rule)
+            result = evaluate_rule(rule_ast, user_data)
+            results[rule] = result
+        except Exception as e:
+            results[rule] = {"error": str(e)}
+    return jsonify(results), 200
 
 if __name__ == '__main__':
-    app.run(debug=True,port=3066)
+    app.run(debug=True)

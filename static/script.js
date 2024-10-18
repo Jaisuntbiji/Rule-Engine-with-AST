@@ -29,7 +29,6 @@ async function combineRules() {
 }
 
 async function evaluateRule() {
-    const ruleAst = document.getElementById('evaluateRuleInput').value;
     const userData = document.getElementById('userData').value;
 
     const response = await fetch('/evaluate_rule', {
@@ -37,9 +36,10 @@ async function evaluateRule() {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ rule_ast: ruleAst, user_data: JSON.parse(userData) }),
+        body: JSON.stringify({ user_data: JSON.parse(userData) }),
     });
 
     const data = await response.json();
-    document.getElementById('result').innerText = JSON.stringify(data);
+    document.getElementById('result').innerText = JSON.stringify(data, null, 2);
 }
+
