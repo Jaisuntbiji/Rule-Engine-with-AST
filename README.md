@@ -45,7 +45,7 @@ cd Rule-Engine-with-AST
 
 ## Setup Database
 
-Step 1 : (only Install system does not conation sql)
+Step 1 : (only Install system does not contain Mysql)
 
 Install Mysql,Before you can use the MySQL command line, ensure that MySQL Server is installed on your system. 
 
