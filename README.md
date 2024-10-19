@@ -86,7 +86,7 @@ INSERT INTO rules (rule_string) VALUES
 
 Step 1: navigate into the project directory.
 ```bash
-'localpath'\cd Rule-Engine-with-AST
+cd Rule-Engine-with-AST
 ```
 
 Step 2: Select the interpreter as python 3.10.0(64-bit)in VScode/other Code editor.
