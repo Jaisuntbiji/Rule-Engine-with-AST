@@ -89,7 +89,7 @@ Step 1: navigate into the project directory.
 cd Rule-Engine-with-AST
 ```
 
-Step 2: Select the interpreter as python 3.10.0(64-bit)in VScode/other Code editor, In Vscode download the python package.
+Step 2: Select the interpreter as python 3.10.0(64-bit)in VScode/other Code editor(when using vscode install python in Extension).
 
 Step 3: Open xampp and start mysql and Apache by clicking the start button. To see the table in the database , click the admin button.
 
