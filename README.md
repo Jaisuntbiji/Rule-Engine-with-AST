@@ -49,7 +49,7 @@ Step 1 : (only Install system does not conation sql)
 
 Install Mysql,Before you can use the MySQL command line, ensure that MySQL Server is installed on your system. 
 
-download Link:https://dev.mysql.com/downloads/mysql/
+download Link:https://dev.mysql.com/downloads/mysql/8.0.html
 
 step 2:Open Mysql command line and login to it.
 
