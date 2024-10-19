@@ -51,15 +51,15 @@ Install Mysql,Before you can use the MySQL command line, ensure that MySQL Serve
 
 download Link:https://dev.mysql.com/downloads/mysql/8.0.html
 
-step 2:Open Mysql command line and login to it.
+step 2 : Open Mysql command line and login to it.
 
-step 3:create a Database and use 
+step 3 : create a Database and use 
 
 ```bash
 CREATE DATABASE rule_engine_db;
 USE rule_engine_db;
 ```
-step 4 :create Table named rules
+step 4 : create Table named rules
 
 ```bash
 CREATE TABLE rules (
@@ -69,7 +69,7 @@ CREATE TABLE rules (
 );
 ```
 
-step 5 :Insert Data Into Table 
+step 5 : Insert Data Into Table 
 
 ```bash
 INSERT INTO rules (rule_string) VALUES 
