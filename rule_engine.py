@@ -1,5 +1,4 @@
 import ast
-import re
 
 # Function to create a rule from a string and return an AST node
 def create_rule(rule_string):
