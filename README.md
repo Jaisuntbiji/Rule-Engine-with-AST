@@ -93,7 +93,7 @@ Step 2: Select the interpreter as python 3.10.0(64-bit)in VScode/other Code edit
 
 Step 3: Open xampp and start mysql and Apache by clicking the start button. To see the table in the database , click the admin button.
 
-Step 4: Use Run code button Or Open terminal run command:
+Step 4: Use Run code button Or Open terminal run command after opening app.py file:
 ```bash
 Python app.py
 ```
