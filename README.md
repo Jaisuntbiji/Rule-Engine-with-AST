@@ -27,7 +27,7 @@ pip install mysql-connector-python==9.1.0
 
 Method 1: Download as zip File
 
-1.Link:https://github.com/Jaisuntbiji/Rule-Engine-with-AST
+Link:https://github.com/Jaisuntbiji/Rule-Engine-with-AST
 
 Method 2:  Clone the Repository Using Git
 
