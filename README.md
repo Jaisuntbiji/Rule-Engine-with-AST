@@ -49,7 +49,7 @@ Install Mysql,Before you can use the MySQL command line, ensure that MySQL Serve
 
 download Link:https://dev.mysql.com/downloads/mysql/
 
-step 2:Open Mysql command line login to it.
+step 2:Open Mysql command line and login to it.
 
 step 3:create a Database and use 
 
