@@ -22,6 +22,8 @@ pip install Flask==3.0.0
 pip install mysql-connector-python==9.1.0
 ```
 4.Install Xampp:
+
+Link : https://www.apachefriends.org/
     
 ## Download 
 
