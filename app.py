@@ -26,7 +26,10 @@ def combine_rules_endpoint():
     rules = request.json.get('rules')
     try:
         combined_ast = combine_rules(rules)
-        return jsonify({"combined_ast": ast.dump(combined_ast)}), 200
+        combined_ast_str = ast.dump(combined_ast)
+        combined_rule_str = " AND ".join(f"({rule})" for rule in rules)  # Combine rules in SQL-like form
+        insert_rule(combined_rule_str)
+        return jsonify({"combined_ast": combined_ast_str,}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 400
 
